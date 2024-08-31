@@ -32,7 +32,7 @@ body {
 header {
     background-color: #29b2e4;
     color: white;
-    padding: 15px 0;
+    padding: 8px 0;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -63,7 +63,7 @@ nav ul li a {
 .hero {
     background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
     background-size: cover;
-    color: rgb(255, 254, 254);
+    color: rgb(251, 251, 251);
     text-align: center;
     padding: 100px 20px;
     position: relative;
@@ -225,7 +225,7 @@ nav ul li a {
 
 footer {
     background-color: #070707;
-    color: white;
+    color: rgb(250, 251, 252);
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
