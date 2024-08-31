@@ -226,14 +226,14 @@ nav ul li a {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
 }
 
 .category-item img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 65%;
+    border-radius: 8px;
+    margin-bottom: 8px;
 }
 
 .category-item h3 {
@@ -241,42 +241,59 @@ nav ul li a {
 }
 
 .featured-products {
-    padding: 50px 20px;
+    height: 600px;
+    padding: 50px 50px;
     background-color: #fff;
     text-align: center;
 }
 
+.btn2 {
+    background-color: rgba(138, 188, 207, 0.5);
+    font-family: Verdana;
+    color: rgb(244, 241, 241);
+    padding: 15px 50px;
+    text-decoration: none;
+    border-radius: 5px; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    position: relative;  
+    left: 43%;
+    
+   
+}
+
 .featured-products h2 {
     margin-bottom: 30px;
-    font-size: 36px;
+    font-size:36px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16px, 1fr));
     gap: 20px;
 }
 
 .product-item img {
-    width: 100%;
+    width: 70%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .product-item h3 {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
 .product-item p {
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 10px;
+    padding:10px 0;
 }
 
 footer {
-    background-color: #d5f26c;
-    color: white;
+    background-color: #070707;
+    color: rgb(250, 251, 252);
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
+    margin-top: 30px;
 }
