@@ -1,56 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login and Registration</title>
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
-    <div class="container">
-        <div class="form-container" id="loginContainer">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="loginUsername" placeholder="Username" required>
-                <input type="password" id="loginPassword" placeholder="Password" required>
-                <button type="submit">Login</button>
-                <p id="loginMessage"></p>
-            </form>
-            <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
-        </div>
-
-        <div class="form-container" id="registerContainer" style="display: none;">
-            <h2>Register</h2>
-            <form id="registerForm">
-                <input type="text" id="registerUsername" placeholder="Username" required>
-                <input type="password" id="registerPassword" placeholder="Password" required>
-                <button type="submit">Register</button>
-                <p id="registerMessage"></p>
-            </form>
-            <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
-        </div>
+<div id="chat-container">
+    <div id="contacts">
+        <!-- List of buyers/sellers -->
     </div>
-
-    <script src="javascript/login.js"></script>
-    <script>
-        // JavaScript to toggle between Login and Register forms
-        const loginContainer = document.getElementById('loginContainer');
-        const registerContainer = document.getElementById('registerContainer');
-        const showRegister = document.getElementById('showRegister');
-        const showLogin = document.getElementById('showLogin');
-
-        showRegister.addEventListener('click', function() {
-            loginContainer.style.display = 'none';
-            registerContainer.style.display = 'block';
-        });
-
-        showLogin.addEventListener('click', function() {
-            registerContainer.style.display = 'none';
-            loginContainer.style.display = 'block';
-        });
-    </script>
-
-    
-</body>
-</html>
-
+    <div id="chat-box">
+        <ul id="messages"></ul>
+    </div>
+    <input id="message-input" placeholder="Type a message..." /><button id="send-button">Send</button>
+</div>
