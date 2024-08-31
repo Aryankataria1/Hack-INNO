@@ -1,1 +1,0 @@
-*This is an added text to the file named hello.md.* We say **Hola amigos!**
