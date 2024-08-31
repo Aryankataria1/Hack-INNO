@@ -2,47 +2,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, sans-serif;
+    font-family: Arial, sans-serif;
 }
-
-
-.site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ccc;
-}
-
-
-
-.site-logo {
-    height: 41px; 
-    width: auto; }
-
-
-
 
 body {
-    background-color: #cddcfa;
+    background-color: #f4f4f4;
     color: #000000;
 }
 
 header {
-    background-color: #29b2e4;
-    color: white;
-    padding: 8px 0;
+    background-color: #ffffff; /* Changed to white */
+    color: #000000; /* Ensure text is black for contrast */
+    padding: 15px 0;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to distinguish the header from the rest of the page */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Vertically align image and text */
+    gap: 10px; /* Space between the image and text */
+}
+
+.logo img {
+    max-height: 50px; /* Adjust this value to control the image size */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .logo h1 {
-    margin-left: 20px;
-    font-size: 24px;
+    font-size: 24px; /* Adjust font size as needed */
+    color: #29b2e4; /* Set text color to match your design */
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Make the text bold */
 }
+
 
 nav ul {
     list-style: none;
@@ -55,57 +51,42 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: #29b2e4; /* Update link color to match the original header background color */
 }
 
-/* Hero Section with Grid Overlay, Gradient Background, and Moving Lines */
+/* Hero Section with Diagonal Neon Line */
 .hero {
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-    background-size: cover;
-    color: rgb(251, 251, 251);
-    text-align: center;
-    padding: 100px 20px;
     position: relative;
-    overflow: hidden; /* Ensure lines don't overflow the hero section */
+    background: linear-gradient(135deg, #52a29f80, #4f4a4a);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 250px 250px;
+    overflow: hidden;
 }
 
-
-
-.hero::before {
-    content: "";
+/* Neon Diagonal Line Effect */
+ .diagonal-line {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(transparent, transparent 99%, rgba(255, 255, 255, 0.05)), 
-        linear-gradient(90deg, transparent, transparent 99%, rgba(255, 255, 255, 0.05));
-    background-size: 50px 50px;
-    opacity: 0.2;
-    pointer-events: none;
-}
+    top: 0%;
+    left: 50%;
+    width: 500%;
+    height: 500%;
+    background: linear-gradient(45deg, rgb(110, 191, 226), rgba(255, 0, 0, 0) 50%),
+                linear-gradient(-45deg, rgba(113, 212, 210, 0.6), rgba(77, 167, 77, 0) 50%),
+                linear-gradient(45deg, rgba(0, 0, 255, 1.0), rgba(0, 0, 255, 0) 50%);
+    background-size: 100% 100%;
+    background-blend-mode: screen;
+    animation: diagonalMove 8s linear infinite;
+    z-index: 1;
+} 
 
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; 
-    height: 100%;
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.15;
-    animation: moveLines 10s linear infinite; 
-}
-
-@keyframes moveLines {
-    from {
-        transform: translateX(0);
+@keyframes diagonalMove {
+    0% {
+        transform:translate(-50%,-50%) rotate(45deg);
     }
-    to {
-        transform: translateX(-50%); 
+    100% {
+        transform: translate(-50%,-50%) rotate(405deg);
     }
 }
 
@@ -123,28 +104,114 @@ nav ul li a {
     font-size: 24px;
     margin-bottom: 30px;
 }
+/* Button Styling */
+.btn2 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ededed00; /* Green background */
+    color: rgb(5, 5, 5); /* White text */
+    text-decoration: none; /* No underline */
+    font-size: 15px;
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 
+                0 0 30px rgba(0, 0, 0, 0.5), 
+                0 0 45px rgba(0, 0, 0, 0.3); Neon glow effect */
+}
+
+.btn2:hover {
+    background-color: #3c343474; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 0 25px rgba(76, 175, 80, 1), 
+                0 0 50px rgba(76, 175, 80, 0.7), 
+                /* 0 0 75px rgba(251, 251, 251, 0.5); Intensify glow on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the parent <li> */
+    top: 100%; /* Align the top of the dropdown with the bottom of the parent <li> */
+    left: 0;
+    background-color: #29b2e4;
+    min-width: 200px; /* Minimum width of the dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add some shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.dropdown-menu li {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+
 
 .btn {
-    background-color: #4CAF50;
+    background-color: #45a049;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: auto; 
-    
-    
-    
+    transition: background-color 0.3s ease;
 }
-.parent-container { 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
+
+.btn:hover {
+    background-color: #45a049;
+}
+/* SEARCH BOX  */
+/* Style for the search form */
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Full circular bar */
+.search-form input[type="text"] {
+    width: 500px;
+    padding: 10px 40px; /* Space for the icon inside the bar */
+    font-size: 16px;
+    border: none;
+    border-radius: 25px; /* Make the bar circular */
+    outline: none;
+    background-color: #fff;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Style the search icon inside the bar */
+.search-form button {
+    position: relative; /* Position icon inside the circular bar */
+    left: 10px;
+    top: 50%;
+    transform: translateY(-0%); /* Center vertically within the input */
+    background: #ffffff; /* White background */
+    border: none;
+    border-radius: 50%; /* Make the button circular */
+    width: 40px; /* Adjust size of the circle */
+    height: 40px; /* Adjust size of the circle */
+    display: flex;
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    cursor: pointer;
+    color: #10b8f0; /* Icon color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
+
+.search-form button i {
+    font-size: 18px;
+}
+
+/* Adjust input text padding when icon is inside */
+.search-form input[type="text"] {
+    padding-left: 40px; /* Adjust padding to accommodate icon */
 }
 
 
-    
-    
-    
+/* search ends */
+
 
 
 .categories {
