@@ -1,6 +1,6 @@
 # Barter Base 💱
 A university-first website that allows students to `buy`, `sell`, and `trade` items securely and efficiently.  
-![Barter Base Logo]()
+![Barter Base Logo](assets/logo_hackinno3.png)
 
 ## The Problem ❗
 * Taking your extra stuff back with yourself after college can be a hassle. 
