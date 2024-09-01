@@ -6,6 +6,8 @@
 }
 
 body {
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: #f4f4f4;
     color: #000000;
     overflow-x: hidden;  /* Allow vertical scrolling */
@@ -59,6 +61,7 @@ nav ul li {
 }
 
 nav ul li a {
+    
     color: #29b2e4; /* Update link color to match the original header background color */
 }
 
@@ -66,6 +69,11 @@ nav ul li a {
 .hero {
     position: relative;
     background: linear-gradient(135deg, #52a29f80, #4f4a4a);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
     background-size: cover;
     color: white;
     text-align: center;
@@ -77,7 +85,7 @@ nav ul li a {
  .diagonal-line {
     position: absolute;
     top: 0%;
-    left: 50%;
+    left: 0%;
     width: 500%;
     height: 500%;
     background: linear-gradient(45deg, rgb(110, 191, 226), rgba(255, 0, 0, 0) 50%),
@@ -135,15 +143,30 @@ nav ul li a {
                 /* 0 0 75px rgba(251, 251, 251, 0.5); Intensify glow on hover */
 }
 
+
+.sidebar {
+    position: fixed; /* Fixes the sidebar in place */
+    right: 0; /* Aligns the sidebar to the right */
+    top: 0; /* Aligns the sidebar to the top */
+    width: 250px; /* Set width according to your design */
+    height: 100%; /* Makes it span the full height of the viewport */
+    background-color: #333; /* Background color for the sidebar */
+    z-index: 1000; /* Ensures the sidebar is on top of other elements */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Optional shadow for better visibility */
+    overflow-y: auto; /* Adds scroll if content exceeds the sidebar height */
+}
+
+
 /* Dropdown Menu Styles */
+/* Dropdown Menu CSS */
 .dropdown-menu {
     display: none; /* Hidden by default */
     position: absolute; /* Positioned relative to the parent <li> */
     top: 100%; /* Align the top of the dropdown with the bottom of the parent <li> */
     left: 0;
-    background-color: #29b2e4;
+    background-color: #29b2e400;
     min-width: 200px; /* Minimum width of the dropdown */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add some shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0); /* Add some shadow */
     z-index: 1000; /* Ensure it stays above other content */
 }
 
@@ -152,7 +175,44 @@ nav ul li a {
     padding: 0; /* Reset padding */
 }
 
+.navbar {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin:  0;
+    display: flex; /* Align menu items horizontally */
+}
 
+.navbar li {
+    position: relative; /* For positioning the dropdown */
+}
+
+.navbar li a {
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add some padding */
+    display: block; /* Make the link take the full space */
+    color: #150c0c; /* Text color */
+    background-color: #33333300; /* Background color of the menu item */
+}
+
+.navbar li a:hover {
+    background-color: #555; /* Change background on hover */
+}
+
+/* Show the dropdown when hovering over the parent <li> */
+.navbar li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-menu li a {
+    color: #000000; /* Text color */
+    background-color: #00000000; /* Background color for dropdown items */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #1e8db200; /* Change background on hover */
+    display: block;
+}
 
 .btn {
     background-color: #45a049;
@@ -260,14 +320,18 @@ nav ul li a {
     font-family: Verdana;
     color: rgb(0, 0, 0);
     padding: 25px 25px;
+}
+.btn2 {
+    background-color: rgba(138, 188, 207, 0);
+    font-family: Verdana;
+    color: rgb(0, 0, 0);
+    padding: 15px 50px;
     text-decoration: none;
     border-radius: 5px; 
     margin-top: 40px;
     margin-bottom: 40px; 
     position: relative;  
     left: 43%;
-    
-   
 }
 
 .featured-products h2 {
@@ -349,4 +413,3 @@ footer {
 .footer-section p strong {
     font-weight: bold;
 }
-
