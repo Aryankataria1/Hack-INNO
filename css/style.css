@@ -8,7 +8,13 @@
 body {
     background-color: #f4f4f4;
     color: #000000;
+    overflow-x: hidden;  /* Allow vertical scrolling */
+    scrollbar-width: none;
+    overflow-y:auto;
+    
 }
+
+
 
 header {
     background-color: #ffffff; /* Changed to white */
@@ -24,12 +30,14 @@ header {
 .logo {
     display: flex;
     align-items: center; /* Vertically align image and text */
-    gap: 10px; /* Space between the image and text */
+    gap: 20px; /* Space between the image and text */
+    
 }
 
 .logo img {
-    max-height: 50px; /* Adjust this value to control the image size */
+    max-height: 100px; /* Adjust this value to control the image size */
     width: auto; /* Maintain aspect ratio */
+    
 }
 
 .logo h1 {
@@ -247,15 +255,15 @@ nav ul li a {
     text-align: center;
 }
 
-.btn2 {
-    background-color: rgba(138, 188, 207, 0.5);
+.btn3 {
+    background-color: rgba(23, 165, 221, 0);
     font-family: Verdana;
-    color: rgb(244, 241, 241);
-    padding: 15px 50px;
+    color: rgb(0, 0, 0);
+    padding: 25px 25px;
     text-decoration: none;
     border-radius: 5px; 
-    margin-top: 20px;
-    margin-bottom: 20px; 
+    margin-top: 40px;
+    margin-bottom: 40px; 
     position: relative;  
     left: 43%;
     
@@ -290,10 +298,55 @@ nav ul li a {
     padding:10px 0;
 }
 
+
+
+
+
 footer {
-    background-color: #070707;
-    color: rgb(250, 251, 252);
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000000;
+    padding: 20px;
+    justify-content: space-between;
 }
+
+.footer-section {
+    width: 18%; /* Adjust width as needed */
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-section img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-section p strong {
+    font-weight: bold;
+}
+
