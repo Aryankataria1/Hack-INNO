@@ -22,12 +22,18 @@ A university-first website that allows students to `buy`, `sell`, and `trade` it
 3. Add your *favourites* to the cart to save them for later.
 
 ## Screenshots 📸
-*Homepage*
+### Homepage
+![Homepage Screenshot](assets/Header.jpg)
 ![Homepage Screenshot](assets/Screenshot1.jpg)
 ![Homepage Screenshot](assets/Screenshot2.jpg)
 ![Homepage Screenshot](assets/Screenshot3.jpg)
 ![Homepage Screenshot](assets/Screenshot4.png)
 
+### Login Page
+![Login Page](assets/Screenshot5.jpg)
+
+### Product Listing Page
+![Product Listing Page](assets/Screenshot6.jpg)
 
 ## Future Plans 🚀
 * Expand the site to *autoselect* the University based on *domain address*.
